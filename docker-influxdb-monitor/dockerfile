@@ -1,0 +1,11 @@
+From  gliderlabs/alpine:3.6
+MAINtAINER python_guo
+RUN apk add --update \
+    bash \
+    python \
+    python-dev \
+    py-pip \
+    && pip install influxdb \
+    && rm -rf /var/cache/apk/*
+ADD influxdb_monitor.py  / 
+ENTRYPOINT ["/usr/bin/python","/influxdb_monitor.py"] 

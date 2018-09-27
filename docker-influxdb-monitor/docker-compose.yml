@@ -1,0 +1,14 @@
+version: '2'
+services:
+  influxdb_monitor:
+    image: influxdb_monitor:1.0
+    mem_limit: 2g
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - /etc/timezone:/etc/timezone:ro
+    environment:
+      HOST: 192.168.206.142
+      PORT: 8086
+      USERNAME: root
+      PASSWORD: ''
+      DBNAME: opentsdb
