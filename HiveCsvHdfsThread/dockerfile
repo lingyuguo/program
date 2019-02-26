@@ -1,0 +1,5 @@
+From  zhenbzha/ubuntu-pyhive
+MAINtAINER python_guo
+RUN pip install pyhdfs 
+ADD hive-csv-hdfs_thread.py  / 
+ADD PoolTask.py /
