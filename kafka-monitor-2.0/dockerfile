@@ -1,0 +1,11 @@
+From  centos:7.4.1708
+MAINtAINER python_guo
+RUN  yum -y install epel-release \
+    && yum  install java python2-pip -y\
+    && pip install --upgrade pip \
+    && pip install influxdb 
+ADD kafka_2.11-1.0.1.tar.gz  /
+ADD opentsdb_http_sender.py  / 
+ENTRYPOINT ["/usr/bin/python","/opentsdb_http_sender.py"] 
+
+
