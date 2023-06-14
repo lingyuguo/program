@@ -7,9 +7,9 @@ import datetime,time
 
 #邮箱#
 HOST = "smtp.163.com"  # 163邮箱
-SUBJECT = "绿能互联监控"
-TO = "lingyuguo6240@163.com"
-FROM = "lingyuguo6240@163.com"
+SUBJECT = "asdf"
+TO = "lingasd@163.com"
+FROM = "lingyasfd6240@163.com"
 
 #发送邮件#
 def sendmail(alter_time,alterName,host,level,message):
