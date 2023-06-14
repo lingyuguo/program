@@ -7,9 +7,9 @@ import datetime,time
 
 #邮箱#
 HOST = "smtp.163.com"  # 163邮箱
-SUBJECT = "绿能互联监控"
-TO = "lingyuguo6240@163.com"
-FROM = "lingyuguo6240@163.com"
+SUBJECT = "sdfas"
+TO = "lasdfa0@163.com"
+FROM = "fsadfa@163.com"
 
 #发送邮件#
 def sendmail(end_time):
@@ -42,7 +42,7 @@ def sendmail(end_time):
 #查数据#
 def mysql_select():
     while True:
-        db = mysql.connector.connect(host="192.168.206.140", db="influxd_mysql", user="root", password="guolingyu",
+        db = mysql.connector.connect(host="192.168.206.140", db="influxd_mysql", user="root", password="adfa,
                                      port=3306, charset='utf8')
         start_time = (datetime.datetime.now() - datetime.timedelta(minutes=1)).strftime("%Y-%m-%d %H:%M:%S")
         end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
