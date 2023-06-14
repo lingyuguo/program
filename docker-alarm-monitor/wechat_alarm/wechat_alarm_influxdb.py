@@ -10,7 +10,7 @@ import mysql.connector
 env_dist = os.environ
 #token
 def get_token():
-        url='https://qyapi.weixin.qq.com/cgi-bin/gettoken'
+        url='https:///*/cgi-bin/gettoken'
 	values = {'corpid' : env_dist.get("CORPID") ,
                   'corpsecret': env_dist.get("CORPSECRET")}
         req = requests.post(url, params=values)
