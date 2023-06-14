@@ -5,7 +5,7 @@ import json
 import mysql.connector
 import time
 #数据库
-db = mysql.connector.connect(host="192.168.206.140",db="influxd_mysql",user="root",password="guolingyu",port=3306,charset='utf8')
+db = mysql.connector.connect(host="0.0.0.0",db="influxd_mysql",user="root",password="****",port=3306,charset='utf8')
 #创建表
 #create table hearbeat(alarm int(10),time Datetime);
 #create table  alters(time Datetime,alertID char(100),alertName char(100),duration char(100),host char(100),level char(100),message char(100),value float(5,3));
