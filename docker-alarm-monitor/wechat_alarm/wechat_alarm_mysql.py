@@ -9,8 +9,8 @@ import mysql.connector
 #token
 def get_token():
         url='https://qyapi.weixin.qq.com/cgi-bin/gettoken'
-        values = {'corpid' : 'wx4c879f1cbd778cc7' ,
-                  'corpsecret':'y8qAg29VO39ENWbY2zdjogioDouydHJlE_QGh3uiS54'}
+        values = {'corpid' : '@' ,
+                  'corpsecret':'@'}
         req = requests.post(url, params=values)
         data = json.loads(req.text)
         return data["access_token"]
@@ -32,7 +32,7 @@ def send_msg(alter_time,alterName,host,level,message):
 #查数据#
 def mysql_select():
     while True:
-        db = mysql.connector.connect(host="192.168.206.140", db="influxd_mysql", user="root", password="guolingyu",
+        db = mysql.connector.connect(host="192.168.206.140", db="influxd_mysql", user="root", password="****",
                                      port=3306, charset='utf8')
         start_time = (datetime.datetime.now() - datetime.timedelta(minutes=1)).strftime("%Y-%m-%d %H:%M:%S")
         end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
