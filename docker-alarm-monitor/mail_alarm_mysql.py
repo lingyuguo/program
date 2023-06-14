@@ -34,7 +34,7 @@ def sendmail(alter_time,alterName,host,level,message):
         server = smtplib.SMTP()
         server.connect(HOST, "25")
         server.starttls()
-        server.login("lingyuguo6240@163.com", "XXXXX")
+        server.login("lafdsd.com", "XXXXX")
         server.sendmail(FROM, TO, msg.as_string())
         server.quit()
         print("send yes!")
@@ -44,7 +44,7 @@ def sendmail(alter_time,alterName,host,level,message):
 #查数据#
 def mysql_select():
     while True:
-        db = mysql.connector.connect(host="192.168.206.140", db="influxd_mysql", user="root", password="guolingyu",
+        db = mysql.connector.connect(host="192.168.206.140", db="influxd_mysql", user="root", password="ga",
                                      port=3306, charset='utf8')
         start_time = (datetime.datetime.now() - datetime.timedelta(minutes=1)).strftime("%Y-%m-%d %H:%M:%S")
         end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
